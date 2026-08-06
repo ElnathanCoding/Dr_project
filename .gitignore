@@ -1,0 +1,27 @@
+# Dataset
+Dataset/
+
+# Python virtual environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Generated outputs
+Results/
+Logs/
+Heatmaps/
+
+# Temporary files
+temp_upload/
+
+# VS Code
+.vscode/
+
+# Laravel
+Website/vendor/
+Website/node_modules/
+Website/.env
+Website/storage/logs/
+Website/bootstrap/cache/
