@@ -1,0 +1,31 @@
+name: dr_package_app
+description: "DR Screening - RETINA offline diabetic retinopathy research prototype."
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.13.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  image_picker: ^1.2.3
+  shared_preferences: 2.5.3
+  shared_preferences_android: 2.4.15
+  ffi: ^2.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/IRIS_GATE_MNV2_FLOAT32.tflite
+    - assets/models/IRIS_MODALITY_FLOAT32.tflite
+    - assets/models/IRIS_GATE2_V2_FLOAT32.tflite
+    - assets/models/RETINA_MASTER12_V2B_FLOAT32.tflite
+    - assets/models/FINAL_E03_SELECT_TF_OPS_FLOAT32.tflite
+    - assets/images/
