@@ -1,27 +1,50 @@
-# Dataset
+# Research data / archives
 Dataset/
-
-# Python virtual environment
-venv/
-
-# Python cache
-__pycache__/
-*.pyc
-
-# Generated outputs
+Dataset_*/
+Dataset_clean/
+Dataset_clean_v2/
+Dataset_development_512/
+Dataset_development_512_fov/
+Dataset_locked_test_P0_512/
+Archives/
 Results/
 Logs/
 Heatmaps/
+Cloud_bundle/
+Cloud_missing_exact/
 
-# Temporary files
-temp_upload/
+# Secrets / signing / local configuration
+.env
+.env.*
+!.env.example
+**/key.properties
+**/local.properties
+*.jks
+*.keystore
+*.p12
+*.pfx
+*.pem
+*.key
+**/google-services.json
 
-# VS Code
+# Flutter / Gradle / IDE generated files
+.dart_tool/
+build/
+.gradle/
+**/.gradle/
+**/ephemeral/
+.idea/
 .vscode/
+*.iml
+**/Generated.xcconfig
+**/flutter_export_environment.sh
 
-# Laravel
-Website/vendor/
-Website/node_modules/
-Website/.env
-Website/storage/logs/
-Website/bootstrap/cache/
+# Windows packaged runtime is a release asset
+App/windows/retina_runtime/*
+!App/windows/retina_runtime/README.md
+
+# OS / temp
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
