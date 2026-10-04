@@ -45,7 +45,7 @@ class DrScreeningApp extends StatelessWidget {
 
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'DR Screening',
+      title: 'RETINA',
       theme: ThemeData(
         useMaterial3: true,
         colorScheme: scheme,
@@ -154,7 +154,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
   bool _pipelineReady = false;
   bool _windowsRuntimeVerified = false;
   bool _isAnalyzing = false;
-  String _status = 'Starting DR Screening...';
+  String _status = 'Starting RETINA...';
 
   String _resultTitle = '';
   String _resultDescription = '';
@@ -328,7 +328,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       });
 
       _showMessage(
-        'DR Screening could not initialize its on-device models.\n\n$error',
+        'RETINA could not initialize its on-device models.\n\n$error',
       );
     }
   }
@@ -795,7 +795,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('DR Screening'),
+          title: const Text('RETINA'),
           content: Text(message),
           actions: <Widget>[
             FilledButton(
@@ -834,7 +834,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'DR Screening',
+                    'RETINA',
                     style: TextStyle(
                       color: DrScreeningApp.navy,
                       fontSize: 19,
@@ -1868,7 +1868,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 const SizedBox(height: 10),
                 const Text(
                   'DME is swelling of the macula caused by retinal vascular leakage. It can occur at different DR severities and is classified separately from the five-stage ICDR DR severity scale. '
-                  'DR Screening / RETINA does not diagnose DME.',
+                  'RETINA does not diagnose DME.',
                   style: TextStyle(height: 1.5),
                 ),
               ],
@@ -2111,7 +2111,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Text(
-              'DR Screening is designed for',
+              'RETINA is designed for',
               style: TextStyle(
                 color: DrScreeningApp.navy,
                 fontWeight: FontWeight.w900,
@@ -2166,7 +2166,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
           _aboutHeader(),
           const SizedBox(height: 14),
           _sectionCard(
-            title: 'How to use DR Screening',
+            title: 'How to use RETINA',
             icon: Icons.help_outline,
             children: const <Widget>[
               _SimpleStep(number: '1', text: 'Choose Gallery or Camera.'),
@@ -2253,7 +2253,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
             icon: Icons.gavel_outlined,
             children: const <Widget>[
               Text(
-                'DR Screening / RETINA is a student research prototype. It has '
+                'RETINA is a student research prototype. It has '
                 'not been approved as a medical device and must not be used as '
                 'the sole basis for diagnosis, treatment, referral, or other '
                 'patient-care decisions. Clinical responsibility remains with '
@@ -2293,7 +2293,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'DR Screening',
+                    'RETINA',
                     style: TextStyle(
                       color: DrScreeningApp.navy,
                       fontSize: 22,
@@ -2354,25 +2354,6 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
           _learnTileBody(
             title: 'E03 classifier',
             body: 'E03 uses an ImageNet-pretrained EfficientNetB2 classifier with 512 x 512 RGB input and five output classes: No apparent DR, Mild NPDR, Moderate NPDR, Severe NPDR, and Proliferative DR. No additional E03 confidence-abstention threshold is deployed.',
-          ),
-          const SizedBox(height: 10),
-          _learnTileBody(
-            title: 'Official held-out E03 evaluation',
-            body:
-                'Locked held-out test: 702 images.\n'
-                'Accuracy: 89.03%\n'
-                'Balanced accuracy: 81.64%\n'
-                'Macro F1: 0.806\n'
-                'Weighted F1: 0.894\n'
-                'Quadratic weighted kappa: 0.956\n'
-                'Macro AUROC: 0.979\n'
-                'Macro AUPRC: 0.850\n\n'
-                'Per-class recall: No apparent DR 94.20%, Mild NPDR 74.51%, Moderate NPDR 92.66%, Severe NPDR 62.86%, Proliferative DR 83.96%.',
-          ),
-          const SizedBox(height: 10),
-          _learnTileBody(
-            title: 'Input-check evaluation notes',
-            body: 'Gate 1 is a MobileNetV2 fundus/non-fundus guard. Master 11 is a MobileNetV2 supported-modality guard. Gate 2 is intentionally conservative: in its locked evaluation, specificity for rejecting ungradable images was 95.91%, false-acceptance rate 4.09%, and gradable sensitivity 30.0%. Master 12 V2B is a MobileNetV3Small DR-scope compatibility guard. At its frozen development-selected threshold of 0.475, E03-development image acceptance was 100.00%, RFMiD supported acceptance 90.28%, PASS_NORMAL acceptance 92.54%, PASS_DR_ONLY acceptance 86.42%, true-pathology rejection 61.18%, and DR-plus-confounder rejection 39.39%. These Master 12 V2B figures are development metrics used for operating-point selection, not an independent final validation. A scope stop does not diagnose another disease, and passing the scope check does not rule other diseases out.',
           ),
           const SizedBox(height: 10),
           _learnTileBody(
@@ -2633,7 +2614,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       case 'Proliferative DR':
         return 'Neovascularization and/or vitreous or preretinal hemorrhage.';
       default:
-        return 'DR Screening uses the five-stage ICDR diabetic-retinopathy severity framework.';
+        return 'RETINA uses the five-stage ICDR diabetic-retinopathy severity framework.';
     }
   }
 }
