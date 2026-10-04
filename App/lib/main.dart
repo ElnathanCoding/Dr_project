@@ -1,4 +1,4 @@
-﻿import 'dart:convert';
+import 'dart:convert';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
@@ -154,7 +154,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
   bool _pipelineReady = false;
   bool _windowsRuntimeVerified = false;
   bool _isAnalyzing = false;
-  String _status = 'Starting RETINA...';
+  String _status = 'Starting DR Screening...';
 
   String _resultTitle = '';
   String _resultDescription = '';
@@ -328,7 +328,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       });
 
       _showMessage(
-        'RETINA could not initialize its on-device models.\n\n$error',
+        'DR Screening could not initialize its on-device models.\n\n$error',
       );
     }
   }
@@ -795,7 +795,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
-          title: const Text('RETINA'),
+          title: const Text('DR Screening'),
           content: Text(message),
           actions: <Widget>[
             FilledButton(
@@ -834,7 +834,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'RETINA',
+                    'DR Screening',
                     style: TextStyle(
                       color: DrScreeningApp.navy,
                       fontSize: 19,
@@ -1868,7 +1868,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 const SizedBox(height: 10),
                 const Text(
                   'DME is swelling of the macula caused by retinal vascular leakage. It can occur at different DR severities and is classified separately from the five-stage ICDR DR severity scale. '
-                  'RETINA does not diagnose DME.',
+                  'DR Screening / RETINA does not diagnose DME.',
                   style: TextStyle(height: 1.5),
                 ),
               ],
@@ -2111,7 +2111,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const Text(
-              'RETINA is designed for',
+              'DR Screening is designed for',
               style: TextStyle(
                 color: DrScreeningApp.navy,
                 fontWeight: FontWeight.w900,
@@ -2166,7 +2166,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
           _aboutHeader(),
           const SizedBox(height: 14),
           _sectionCard(
-            title: 'How to use RETINA',
+            title: 'How to use DR Screening',
             icon: Icons.help_outline,
             children: const <Widget>[
               _SimpleStep(number: '1', text: 'Choose Gallery or Camera.'),
@@ -2253,7 +2253,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
             icon: Icons.gavel_outlined,
             children: const <Widget>[
               Text(
-                'RETINA is a student research prototype. It has '
+                'DR Screening / RETINA is a student research prototype. It has '
                 'not been approved as a medical device and must not be used as '
                 'the sole basis for diagnosis, treatment, referral, or other '
                 'patient-care decisions. Clinical responsibility remains with '
@@ -2293,7 +2293,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text(
-                    'RETINA',
+                    'DR Screening',
                     style: TextStyle(
                       color: DrScreeningApp.navy,
                       fontSize: 22,
@@ -2614,7 +2614,7 @@ class _DrScreeningHomeState extends State<DrScreeningHome> {
       case 'Proliferative DR':
         return 'Neovascularization and/or vitreous or preretinal hemorrhage.';
       default:
-        return 'RETINA uses the five-stage ICDR diabetic-retinopathy severity framework.';
+        return 'DR Screening uses the five-stage ICDR diabetic-retinopathy severity framework.';
     }
   }
 }
